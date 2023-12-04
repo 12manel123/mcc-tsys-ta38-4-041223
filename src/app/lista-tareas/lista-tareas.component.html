@@ -1,0 +1,10 @@
+<div>
+    <h2>Lista de Tareas</h2>
+    <ul>
+        @for (tarea of getTareas(); track $index) {
+            {{ tarea.title }} - {{ tarea.description }}
+            <button (click)="borrarTarea(tarea.id)">Eliminar</button>
+            <button (click)="marcarComoCompletada(tarea.id)">Completada</button><br>
+        }
+    </ul>
+</div>
